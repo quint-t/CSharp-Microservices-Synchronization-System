@@ -1,0 +1,12 @@
+﻿@page
+@model CounterModel
+@{
+	ViewData["Title"] = "Counter Model";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+	<input type="text" name="counter_value" value="@Model.CounterValue" />
+	<input type="submit" value="Count" />
+</form>
+

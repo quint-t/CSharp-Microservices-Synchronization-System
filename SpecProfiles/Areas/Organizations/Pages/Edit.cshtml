@@ -1,0 +1,75 @@
+﻿@page
+@model SpecProfiles.Areas.Organizations.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Organization</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Organization.Id" />
+            <div class="form-group">
+                <label asp-for="Organization.Email" class="control-label"></label>
+                <input asp-for="Organization.Email" class="form-control" />
+                <span asp-validation-for="Organization.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.PhoneNumber" class="control-label"></label>
+                <input asp-for="Organization.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Organization.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.EstablishmentDate" class="control-label"></label>
+                <input asp-for="Organization.EstablishmentDate" class="form-control" />
+                <span asp-validation-for="Organization.EstablishmentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.Type" class="control-label"></label>
+                <input asp-for="Organization.Type" class="form-control" />
+                <span asp-validation-for="Organization.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.Industry" class="control-label"></label>
+                <input asp-for="Organization.Industry" class="form-control" />
+                <span asp-validation-for="Organization.Industry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.Country" class="control-label"></label>
+                <input asp-for="Organization.Country" class="form-control" />
+                <span asp-validation-for="Organization.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.City" class="control-label"></label>
+                <input asp-for="Organization.City" class="form-control" />
+                <span asp-validation-for="Organization.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.ShortInfo" class="control-label"></label>
+                <input asp-for="Organization.ShortInfo" class="form-control" />
+                <span asp-validation-for="Organization.ShortInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Organization.AdditionalData" class="control-label"></label>
+                <input asp-for="Organization.AdditionalData" class="form-control" />
+                <span asp-validation-for="Organization.AdditionalData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
